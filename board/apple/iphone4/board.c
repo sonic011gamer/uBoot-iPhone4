@@ -52,11 +52,14 @@ int a4_kp_getc(void)
 void *video_hw_init(void)
 {
 	/* fill in Graphic Device */
+#if 0
 #define S5L8930X_DP_FB_ADDR		0x89004044
 #define S5L8930X_DP_FB_SIZE		0x89004060
-	gdev.frameAdrs = *(uint32_t*)S5L8930X_DP_FB_ADDR;
-	gdev.winSizeX = ((*(uint32_t*)S5L8930X_DP_FB_SIZE) & 0xFFFF0000) >> 16;
-	gdev.winSizeY = ((*(uint32_t*)S5L8930X_DP_FB_SIZE) & 0x0000FFFF) >> 0;
+#endif
+
+	gdev.frameAdrs = 0x9F6FC000;  //*(uint32_t*)S5L8930X_DP_FB_ADDR;
+	gdev.winSizeX = 1024; //((*(uint32_t*)S5L8930X_DP_FB_SIZE) & 0xFFFF0000) >> 16;
+	gdev.winSizeY = 768; //((*(uint32_t*)S5L8930X_DP_FB_SIZE) & 0x0000FFFF) >> 0;
 	gdev.gdfBytesPP = 4;
 	gdev.gdfIndex = GDF_32BIT_X888RGB;
 	memset((void *)gdev.frameAdrs, 0, 960 * 640 * 4);

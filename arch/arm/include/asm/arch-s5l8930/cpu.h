@@ -18,7 +18,7 @@
 
 #define S5L_CPU_NAME		"S5L"
 
-#define S5L8930_UART		0x82500000
+#define S5L8930_UART		0x32500000
 
 #ifndef __ASSEMBLY__
 #include <asm/io.h>

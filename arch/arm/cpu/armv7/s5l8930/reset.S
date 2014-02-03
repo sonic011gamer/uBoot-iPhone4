@@ -17,6 +17,8 @@
 #include <linux/linkage.h>
 
 ENTRY(reset_cpu)
+	b		.
+
 	ldr		r1, =0xBF10202C
 	ldr		r3, =0xBF102024
 	movs	r0, #0

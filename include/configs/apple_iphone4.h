@@ -26,7 +26,7 @@
 
 #include <asm/arch/cpu.h>
 
-#define CONFIG_SYS_TEXT_BASE		0x40004000
+#define CONFIG_SYS_TEXT_BASE		0x80004000
 
 /*
  * Display CPU and Board information
@@ -93,7 +93,7 @@
 #define CONFIG_SYS_LONGHELP			/* undef to save memory */
 #define CONFIG_SYS_HUSH_PARSER			/* use "hush" command parser */
 #define CONFIG_SYS_PROMPT_HUSH_PS2	"> "
-#define CONFIG_SYS_PROMPT		"[Apple iPhone4] # "
+#define CONFIG_SYS_PROMPT		"[A5-uBoot] # "
 #define CONFIG_SYS_CBSIZE		256	/* Console I/O Buffer Size */
 /* Print Buffer Size */
 #define CONFIG_SYS_PBSIZE		(CONFIG_SYS_CBSIZE + \
@@ -104,9 +104,9 @@
 
 #define CONFIG_BAUDRATE 		115200
 
-#define CONFIG_SYS_LOAD_ADDR	0x44000000
+#define CONFIG_SYS_LOAD_ADDR	0x84000000
 
-#define CONFIG_SYS_INIT_RAM_ADDR	0x43000000
+#define CONFIG_SYS_INIT_RAM_ADDR	0x83000000
 #define CONFIG_SYS_INIT_RAM_SIZE	0x8000
 #define CONFIG_SYS_INIT_SP_ADDR		(CONFIG_SYS_INIT_RAM_ADDR + \
 			CONFIG_SYS_INIT_RAM_SIZE - GENERATED_GBL_DATA_SIZE)
@@ -149,7 +149,7 @@ int a4_kp_getc(void);
 #define CONFIG_STACKSIZE		(128 << 10) /* regular stack 128 KiB */
 
 #define CONFIG_NR_DRAM_BANKS		1
-#define CONFIG_SYS_SDRAM_BASE		0x40000000
+#define CONFIG_SYS_SDRAM_BASE		0x80000000
 
 #define LINUX_BOOT_PARAM_ADDR		(CONFIG_SYS_SDRAM_BASE + 0x100)
 

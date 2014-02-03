@@ -25,6 +25,8 @@ int timer_init(void)
 
 u64 get_timer_us(ulong base)
 {
+	return 0;
+
 	u32 tick_high, tick_low, tick_high2;
 
 	do {
@@ -38,6 +40,8 @@ u64 get_timer_us(ulong base)
 
 ulong get_timer(ulong base)
 {
+	return 0;
+
 	ulong us = get_timer_us(0);
 	us *= (1000000);
 	us /= S5L8930_HZ_SEC;
@@ -46,6 +50,7 @@ ulong get_timer(ulong base)
 
 unsigned long long get_ticks(void)
 {
+	return 0;
 	return get_timer(0);
 }
 
@@ -56,6 +61,8 @@ ulong get_tbclk(void)
 
 void __udelay(unsigned long usec)
 {
+	return;
+
 	ulong endtime;
 	signed long diff;
 
